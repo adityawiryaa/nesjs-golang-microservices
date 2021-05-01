@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/kafka",
+    "types": ["node"],
+    "emitDecoratorMetadata": true,
+    "target": "es2017"
+  },
+  "exclude": ["**/*spec.ts"],
+  "include": ["**/*.ts"]
+}

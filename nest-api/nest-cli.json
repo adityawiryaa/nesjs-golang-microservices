@@ -1,0 +1,41 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api/src",
+  "monorepo": true,
+  "root": "apps/api",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api/tsconfig.app.json",
+    "assets": ["**/*.proto"],
+    "watchAssets": true
+  },
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.app.json"
+      }
+    },
+    "rabbit-mq": {
+      "type": "application",
+      "root": "apps/rabbit-mq",
+      "entryFile": "main",
+      "sourceRoot": "apps/rabbit-mq/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rabbit-mq/tsconfig.app.json"
+      }
+    },
+    "kafka": {
+      "type": "application",
+      "root": "apps/kafka",
+      "entryFile": "main",
+      "sourceRoot": "apps/kafka/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kafka/tsconfig.app.json"
+      }
+    }
+  }
+}
